@@ -3,13 +3,13 @@ using namespace std;
 void solve(){
     long long n;
     cin >> n;
-    vector<int> a(n); int sum=0;
+    vector<int> a(n); int currentSum=0;
     for(int i=0;i<n-1;++i){
         int x; cin>>x;
-        sum += x;
+        currentSum += x;
     }
     int tot=n*(n+1)/2;
-    cout << tot-sum;
+    cout << tot-currentSum;
 }
 int main(){
     ios::sync_with_stdio(false);
