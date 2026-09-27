@@ -5,12 +5,13 @@ void solve(){
     cin >> s;
     int n=s.size();
     int ans = 1;
-    int left=0;
-    for(int right=1;right < n ; ++right){
-        if(s[left]==s[right]){
-            ans=max(ans,right-left+1);
+    int current=1;
+    for(int i=1;i < n ; ++i){
+        if(s[i]==s[i-1]){
+            current++;
         }
-        else if(s[left] != s[right]) left=right;
+        else if(s[i] != s[i-1]) current=1;
+        ans = max(ans, current);
     }
     cout << ans;
 }
