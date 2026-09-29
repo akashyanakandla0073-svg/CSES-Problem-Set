@@ -9,12 +9,12 @@ void solve(){
         cin >> y >> x;
         long long M=max(y,x);
         if(M==x){
-            if(M& 1) ans=M*M;
+            if(M& 1) ans=M*M+1-y;
             else ans=(M-1)*(M-1)+y;
         }
         else{
             if(M&1) ans=(M-1)*(M-1)+x;
-            else ans=M*M;
+            else ans=M*M+1-x;
         }
         cout << ans<<"\n";
     }
